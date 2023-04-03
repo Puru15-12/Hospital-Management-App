@@ -12,6 +12,9 @@
         android:theme="@style/Theme.Hospital_Management_app"
         tools:targetApi="31">
         <activity
+            android:name=".dash_board"
+            android:exported="false" />
+        <activity
             android:name=".Login_activity"
             android:exported="false" />
         <activity
