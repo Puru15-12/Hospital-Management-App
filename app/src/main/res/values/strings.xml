@@ -2,6 +2,7 @@
     <string name="app_name">Hospital_Management_app</string>
     
     <string-array name="Select_city">
+        <item>Select City</item>
         <item>Lucknow</item>
         <item>Varanasi</item>
         <item>Prayagraj</item>
