@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">Hospital_Management_app</string>
+    
+    <string-array name="Select_city">
+        <item>Lucknow</item>
+        <item>Varanasi</item>
+        <item>Prayagraj</item>
+        <item>Noida</item>
+        <item>Mathura</item>
+        <item>Gorakhpur</item>
+        <item>Basti</item>
+        <item>Azamgarh</item>
+        <item>Ghazipur</item>
+        <item>AmbedkarNagar</item>
+        <item>Patna</item>
+        <item>Unnao</item>
+        <item>Ghaziabad</item>
+    </string-array>
 </resources>
