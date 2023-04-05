@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "583692441811",
+    "project_id": "intentpassing",
+    "storage_bucket": "intentpassing.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:583692441811:android:c960af5a106671c57cdc26",
+        "android_client_info": {
+          "package_name": "com.example.hospital_management_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "583692441811-ouee4gcgp3hl8l5j9a5s5rv4asnkrgqo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDM6yJCNqV-BqrSwU5fXlwXKnFqRxc3WMQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "583692441811-ouee4gcgp3hl8l5j9a5s5rv4asnkrgqo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:583692441811:android:538bff5fd9d6d9497cdc26",
+        "android_client_info": {
+          "package_name": "com.example.intentpassing"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "583692441811-ouee4gcgp3hl8l5j9a5s5rv4asnkrgqo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDM6yJCNqV-BqrSwU5fXlwXKnFqRxc3WMQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "583692441811-ouee4gcgp3hl8l5j9a5s5rv4asnkrgqo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
