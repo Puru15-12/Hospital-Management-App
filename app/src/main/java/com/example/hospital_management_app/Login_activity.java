@@ -1,53 +1,47 @@
 package com.example.hospital_management_app;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.hospital_management_app.databinding.ActivityLoginBinding;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
 
 public class Login_activity extends AppCompatActivity {
-
-    private EditText phone;
-    private EditText password;
-    private Button log;
-    private FirebaseAuth auth;
+    private ActivityLoginBinding binding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
 
-        phone=findViewById(R.id.editTextTextEmailAddress);
-        password=findViewById(R.id.editTextNumberPassword);
-        log=findViewById(R.id.login);
-        auth=FirebaseAuth.getInstance();
-
-        log.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String text_phone=phone.getText().toString();
-                String text_password=password.getText().toString();
-                loginuser(text_phone,text_password);
-            }
-        });
+        binding=ActivityLoginBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+        setListeners();
     }
 
-    private void loginuser(String text_phone, String text_password) {
+    public void setListeners(){
+        binding.newAccount.setOnClickListener(v->startActivity(new Intent(getApplicationContext(), newAccount.class)));
 
-        auth.signInWithEmailAndPassword(text_phone,text_password).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
-            @Override
-            public void onSuccess(AuthResult authResult) {
-                Toast.makeText(Login_activity.this,"Login Successful",Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(Login_activity.this,MainActivity.class));
-            }
-        });
+        binding.buttonSignIn.setOnClickListener(v -> addDataToFirestore());
+    }
+
+    private void addDataToFirestore(){
+        FirebaseFirestore database=FirebaseFirestore.getInstance();
+        HashMap<String, Object > data=new HashMap<>();
+        data.put("First_name" ,"Purushottam");
+        data.put("Last_name" ,"Singh");
+
+        database.collection("users")
+                .add(data)
+                .addOnSuccessListener(documentReference -> {
+                    Toast.makeText(getApplicationContext(), "Data inserted" , Toast.LENGTH_SHORT).show();
+                })
+                .addOnFailureListener(exception ->{
+                    Toast.makeText(getApplicationContext(), exception.getMessage()  ,Toast.LENGTH_SHORT ).show();
+                });
     }
 
 }
