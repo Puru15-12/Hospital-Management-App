@@ -1,55 +1,43 @@
 package com.example.hospital_management_app;
 
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.provider.SyncStateContract;
+
+import com.example.hospital_management_app.utilities.Constants;
+
 public class UserHelperClass {
-    String first,last,email,no,password,options;
+    private final SharedPreferences sharedPreferences;
 
-    public UserHelperClass(){};
-
-    public void setFirst(String m1){
-        first=m1;
+    public UserHelperClass(Context context)
+    {
+        sharedPreferences= context.getSharedPreferences(Constants.KEY_PREFERENCE_NAME, Context.MODE_PRIVATE);
     }
-    public void  setLast(String m2){
-        last=m2;
-    }
-    public void  setEmail(String m3){
-        email=m3;
-    }
-    public void  setNo(String m4){
-        no=m4;
-    }
-    public void  setPassword(String m5){
-        password=m5;
-    }
-    public void  setOptions(String m6){
-        options=m6;
+    public void putBoolean(String key, Boolean value)
+    {
+        SharedPreferences.Editor editor= sharedPreferences.edit();
+        editor.putBoolean(key ,value);
+        editor.apply();
     }
 
-    public String getFirst()
-    {
-        return first;
-    }
-    public String getLast()
-    {
-        return last;
-    }
-    public String getEmail()
-    {
-        return email;
-    }
-    public String getNo()
-    {
-        return no;
-    }
-    public String getPassword()
-    {
-        return password;
-    }
-    public String getOptions()
-    {
-        return options;
+    public Boolean getBoolean(String key){
+        return sharedPreferences.getBoolean(key,false);
     }
 
+    public void putString(String key, String value){
+        SharedPreferences.Editor editor= sharedPreferences.edit();
+        editor.putString(key ,value);
+        editor.apply();
+    }
 
+    public String getString(String key){
+        return sharedPreferences.getString(key,null);
+    }
 
+    public void clear(){
+        SharedPreferences.Editor editor= sharedPreferences.edit();
+        editor.clear();
+        editor.apply();
+    }
 
 }
