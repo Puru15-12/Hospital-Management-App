@@ -33,4 +33,12 @@
         <item>Unnao</item>
         <item>Ghaziabad</item>
     </string-array>
+
+    <string-array name="Select_department">
+        <item>Cardiology</item>
+        <item>Neurology</item>
+        <item>Obstetrics and gynaecology</item>
+        <item>Internal medicine</item>
+        <item>Urology</item>
+    </string-array>
 </resources>
