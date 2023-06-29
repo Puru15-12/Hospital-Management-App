@@ -1,6 +1,22 @@
 <resources>
     <string name="app_name">Hospital_Management_app</string>
-    
+    <string name="spin">Select City</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="login_to_continue">Login to Continue</string>
+    <string name="welcome_back">Welcome Back!</string>
+    <string name="create_new_account">Create New Account</string>
+    <string name="sign_in">Sign In</string>
+    <string name="name">Name</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="you_are_a">You are a:</string>
+    <string name="ambulance">Ambulance</string>
+    <string name="doctor">Doctor</string>
+    <string name="patient">patient</string>
+    <string name="ambulanceman">AmbulanceMan</string>
+    <string name="mobile_number">Mobile Number</string>
+
     <string-array name="Select_city">
         <item>Select City</item>
         <item>Lucknow</item>
@@ -16,5 +32,13 @@
         <item>Patna</item>
         <item>Unnao</item>
         <item>Ghaziabad</item>
+    </string-array>
+
+    <string-array name="Select_department">
+        <item>Cardiology</item>
+        <item>Neurology</item>
+        <item>Obstetrics and gynaecology</item>
+        <item>Internal medicine</item>
+        <item>Urology</item>
     </string-array>
 </resources>
